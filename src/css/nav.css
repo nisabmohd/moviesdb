@@ -1,0 +1,32 @@
+.navbarcus{
+    width: 100%;
+    background-color: #2B2932;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+}
+.navchild{
+    width: 73%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:auto
+}
+.navlogo img{
+    width: 30px;
+    margin-top: -8px;
+} 
+.navbarcus a{
+    color: white;
+    margin-right: 15px;
+    margin-left: 10px;
+    text-decoration:  none;
+    font-size: 15px;
+    font-weight: bold;
+}
+@media screen and (max-width:595px){
+    .navchild{
+        width: 86%;
+    }
+
+}

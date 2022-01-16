@@ -1,0 +1,25 @@
+.discovercard{
+    width:215px;   
+    margin: auto;
+    margin-top: 15px;
+    text-align: left;
+}
+.discovercard img{
+    width: 100%;
+    border-radius: 12px
+}
+.griddisc{
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.discovercard h5{
+    margin-top: 9px;
+    font-size: 15px;
+}
+.discovercard p{
+    color: rgb(94, 94, 94);
+    font-size: 12px;
+}

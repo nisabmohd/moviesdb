@@ -29,3 +29,9 @@
 .searchbar button:hover{
     color: rgb(14, 14, 14);
 }
+@media screen and (max-width:595px){
+    .searchbar{
+        width: 92%;
+    }
+
+}

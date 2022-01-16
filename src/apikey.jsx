@@ -1,0 +1,2 @@
+const apikey="dce7f57eb9dcdb2e48cff0621e2c5035"
+export default apikey
