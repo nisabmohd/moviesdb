@@ -5,12 +5,12 @@ This web app uses <a href="https://www.themoviedb.org/">TheMovieDB</a> API to ge
 
 #### Install
 ```
-git clone https://github.com/nisabmohd/movies-react/.git
+git clone https://github.com/nisabmohd/movies-react.git
 ```
 
 #### Install all the required dependencies using
 ```
-npm i
+npm install
 ```
 #### Launch the App
 ```
