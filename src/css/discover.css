@@ -12,8 +12,8 @@
     width: 75%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 35px;
 }
 .discovercard h5{
     margin-top: 9px;
@@ -22,4 +22,32 @@
 .discovercard p{
     color: rgb(94, 94, 94);
     font-size: 12px;
+}
+@media screen and (max-width:1250px){
+    .griddisc{
+        width: 95%;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:705px){
+    .griddisc{
+        width: 95%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .discovercard{
+        width:240px; 
+    }
+}
+@media screen and (max-width:545px){
+    .griddisc{
+        width: 95%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .discovercard{
+        width:240px; 
+    }
+}
+.popular{
+    display: flex;
+    flex-direction: column;
 }

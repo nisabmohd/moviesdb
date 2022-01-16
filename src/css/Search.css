@@ -18,16 +18,13 @@
 }
 .searchbar button{
     margin:0 0;
-    cursor: pointer;
+    /* cursor: pointer; */
     background-color: transparent;
     outline: none;
     border: none;
     color: gray;
     font-size: 14px;
 
-}
-.searchbar button:hover{
-    color: rgb(14, 14, 14);
 }
 @media screen and (max-width:595px){
     .searchbar{

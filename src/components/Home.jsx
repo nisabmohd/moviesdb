@@ -3,21 +3,21 @@ import data from '../Fetch';
 import { useEffect } from 'react'
 import { Cardc } from './Cardc';
 import '../css/Home.css'
-import { Searchbar } from './Searchbar';
-import apikey from '../apikey' 
+import apikey from '../apikey'
 import { Link } from 'react-router-dom';
-
+import next from '../ico/next.png'
 export const Home = (props) => {
     const [moviedata, setMoviedata] = useState([])
     const [top, setTop] = useState([])
-    const [nowplaying,setNowplaying]=useState([])
+    const [nowplaying, setNowplaying] = useState([])
     useEffect(() => {
+        document.title="Movies DB"
         const func = async () => {
             const tempresp = await data(`https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=1`)
             setMoviedata(tempresp.results)
             const top = await data(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apikey}&language=en-US&page=1`)
             setTop(top.results)
-            const now=await data(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apikey}&language=en-US&page=1`)
+            const now = await data(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apikey}&language=en-US&page=1`)
             setNowplaying(now.results)
         }
         func()
@@ -25,10 +25,11 @@ export const Home = (props) => {
     return (
 
         <>
-            <Searchbar />
             <div className="homecontainer">
 
-                <Link to="/popularmovies"><h4 className='top_headlines'>What's Popular</h4></Link>
+                <div className="headerclassofhome"><Link to="/popularmovies"><h4 className='top_headlines'>What's Popular in Movies</h4> </Link>
+                    <img style={{ width: '15px', height: '15px' }} src={next} alt="" />
+                </div>
                 <div className='container_custom spaceabove'>
                     <div className="grid_custom">
                         {
@@ -42,7 +43,10 @@ export const Home = (props) => {
                 </div>
 
 
-                <Link to="topmovies"><h4 className='top_headlines'>Top Rated</h4></Link>
+
+                <div className="headerclassofhome"><Link to="/topmovies"><h4 className='top_headlines'>Top Rated Movies</h4> </Link>
+                    <img style={{ width: '15px', height: '15px' }} src={next} alt="" />
+                </div>
                 <div className='container_custom spaceabove'>
                     <div className="grid_custom">
                         {
@@ -55,7 +59,10 @@ export const Home = (props) => {
                     </div>
                 </div>
 
-                <Link to="nowmovies"><h4 className='top_headlines'>Now Playing</h4></Link>
+
+                <div className="headerclassofhome"><Link to="/nowmovies"><h4 className='top_headlines'>Now Playing Movies</h4> </Link>
+                    <img style={{ width: '15px', height: '15px' }} src={next} alt="" />
+                </div>
                 <div className='container_custom spaceabove'>
                     <div className="grid_custom">
                         {
