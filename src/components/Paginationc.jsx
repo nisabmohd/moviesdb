@@ -14,7 +14,7 @@ export default function Paginationc(props) {
                 {
                     (props.dis === true) ? (<Pagination.Prev disabled onClick={prevpage} />) : ( <Pagination.Prev onClick={prevpage} />)
                 }
-                <Pagination.Item >{props.page}</Pagination.Item>
+                <Pagination.Item active >{props.page}</Pagination.Item>
                 <Pagination.Item >{props.page + 1}</Pagination.Item>
                 <Pagination.Item >{props.page + 2}</Pagination.Item>
                 <Pagination.Next onClick={nextpage} />
