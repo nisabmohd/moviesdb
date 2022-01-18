@@ -11,8 +11,10 @@ export default function Paginationc(props) {
 
         <div className='container d-flex justify-content-center my-5'>
             <Pagination>
-                <Pagination.Prev onClick={prevpage} />
-                <Pagination.Item active>{props.page}</Pagination.Item>
+                {
+                    (props.dis === true) ? (<Pagination.Prev disabled onClick={prevpage} />) : ( <Pagination.Prev onClick={prevpage} />)
+                }
+                <Pagination.Item >{props.page}</Pagination.Item>
                 <Pagination.Item >{props.page + 1}</Pagination.Item>
                 <Pagination.Item >{props.page + 2}</Pagination.Item>
                 <Pagination.Next onClick={nextpage} />

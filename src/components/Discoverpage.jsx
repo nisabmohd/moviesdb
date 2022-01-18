@@ -8,17 +8,30 @@ import '../css/discover.css'
 export const Discoverpage = ({ cat, endpoint, header }) => {
     const [moviedata, setMoviedata] = useState([])
     const [page, setPage] = useState(1)
+    const [disabled,setDisabled]=useState(true)
     const [totalpages, setTotalpages] = useState(0)
     function next() {
-        setPage(page + 1)
-        window.scroll(0, 0)
+        if(page<=totalpages-1){
+            setPage(page + 1)
+            window.scroll(0, 0)
+            setDisabled(false)
+        }
+        else{
+            setDisabled(true)
+        }
     }
     function prev() {
-        setPage(page - 1)
-        window.scroll(0, 0)
+        if (page!==0 && page>=2 ) {
+            setPage(page - 1)
+            window.scroll(0, 0)
+            setDisabled(true)
+        }
+        else{
+            setDisabled(true)
+        }
     }
     useEffect(() => {
-        document.title=header
+        document.title = header
         const func = async () => {
             const tempresp = await data(`https://api.themoviedb.org/3/${cat}/${endpoint}?api_key=${apikey}&language=en-US&page=${page}`)
             console.log(tempresp);
@@ -26,10 +39,10 @@ export const Discoverpage = ({ cat, endpoint, header }) => {
             setTotalpages(tempresp.total_pages)
         }
         func()
-    }, [page,cat,endpoint,header])
+    }, [page, cat, endpoint, header])
     return (
         <div className='popular'>
-            <h5 style={{marginTop:'35px'}}>Showing Results For : {header}</h5>
+            <h5 style={{ marginTop: '35px' }}>Showing Results For : {header}</h5>
             <div className="griddisc">
                 {
                     moviedata.map((item) => {
@@ -39,7 +52,7 @@ export const Discoverpage = ({ cat, endpoint, header }) => {
                     })
                 }
             </div>
-            <Paginationc page={page} total={totalpages} nfunc={next} pfunc={prev} />
+            <Paginationc dis={disabled} page={page} total={totalpages} nfunc={next} pfunc={prev} />
         </div>
     )
 }
