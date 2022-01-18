@@ -24,7 +24,8 @@ export const Discoverpage = ({ cat, endpoint, header }) => {
         if (page!==0 && page>=2 ) {
             setPage(page - 1)
             window.scroll(0, 0)
-            setDisabled(false)
+            if(page===2)
+            setDisabled(true)
         }
         else{
             setDisabled(true)
