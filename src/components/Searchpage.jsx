@@ -17,16 +17,17 @@ export const Searchpage = () => {
         if(page<=totalpages-1){
             setPage(page + 1)
             window.scroll(0, 0)
-            setDisabled(false)
+            
         }
         else{
-            setDisabled(true)
+            
         }
     }
     function prev() {
         if (page!==0 && page>=2 ) {
             setPage(page - 1)
             window.scroll(0, 0)
+            if(page===2)
             setDisabled(true)
         }
         else{
