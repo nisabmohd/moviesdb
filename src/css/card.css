@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 .card{
-    width: 160px;
+    width: 210px;
     margin: 9px 11px;
     border: none;
     position: relative;
 }
-.card img{
+.card a img{
     border-radius: 9px;
+    width: 99%;
 }
 .card h5{
     font-size: 15px;

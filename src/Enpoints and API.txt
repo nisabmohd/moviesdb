@@ -3,5 +3,5 @@ const popular="https://api.themoviedb.org/3/movie/popular?api_key=dce7f57eb9dcdb
 const top-rated="https://api.themoviedb.org/3/movie/top_rated?api_key=dce7f57eb9dcdb2e48cff0621e2c5035&language=en-US&page=1"
 now playing= "https://api.themoviedb.org/3/movie/now_playing?api_key=dce7f57eb9dcdb2e48cff0621e2c5035&language=en-US&page=1"
 const search="https://api.themoviedb.org/3/search/multi?api_key=dce7f57eb9dcdb2e48cff0621e2c5035&language=en-US&query=Avengers&page=1&include_adult=false"
-
+const details="https://api.themoviedb.org/3/movie/278?api_key=dce7f57eb9dcdb2e48cff0621e2c5035&language=en-US"
 const img base ur;=https://image.tmdb.org/t/p/original/nNmJRkg8wWnRmzQDe2FwKbPIsJV.jpg

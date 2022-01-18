@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { Discoverpage } from './components/Discoverpage';
 import { Searchpage } from './components/Searchpage';
+import { Detailedmovie } from './components/Detailedmovie';
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/tv/toptv" element={<Discoverpage cat="tv" endpoint="top_rated" header="Top-Rated TV Shows" />} />
           <Route exact path="/tv/nowtv" element={<Discoverpage cat="tv" endpoint="now_playing" header="Now Playing TV shows" />} />
           <Route exact path="/search" element={<Searchpage/>} />
+          <Route path="/details" element={<Detailedmovie />} />
         </Routes>
       </div>
     </BrowserRouter>

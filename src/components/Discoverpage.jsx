@@ -29,11 +29,12 @@ export const Discoverpage = ({ cat, endpoint, header }) => {
     }, [page,cat,endpoint,header])
     return (
         <div className='popular'>
+            <h5 style={{marginTop:'35px'}}>Showing Results For : {header}</h5>
             <div className="griddisc">
                 {
                     moviedata.map((item) => {
                         return (
-                            <Discovercard title={item.original_title || item.original_name} img={item.poster_path} date={item.first_air_date || item.release_date} />
+                            <Discovercard cat={cat} title={item.original_title || item.original_name} img={item.poster_path} date={item.first_air_date || item.release_date} id={item.id} />
                         )
                     })
                 }

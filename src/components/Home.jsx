@@ -28,14 +28,14 @@ export const Home = (props) => {
             <div className="homecontainer">
 
                 <div className="headerclassofhome"><Link to="/popularmovies"><h4 className='top_headlines'>What's Popular in Movies</h4> </Link>
-                    <img style={{ width: '15px', height: '15px' }} src={next} alt="" />
+                    <img style={{ width: '15px', height: '15px', marginTop:'8px' }} src={next} alt="" />
                 </div>
                 <div className='container_custom spaceabove'>
                     <div className="grid_custom">
                         {
                             moviedata.map((item) => {
                                 return (
-                                    <Cardc title={item.original_title} image={item.poster_path} desc={item.overview} date={item.release_date} ratings={item.vote_average} />
+                                    <Cardc id={item.id} cat="movie" title={item.original_title} image={item.poster_path} desc={item.overview} date={item.release_date} ratings={item.vote_average} />
                                 )
                             })
                         }
@@ -45,14 +45,14 @@ export const Home = (props) => {
 
 
                 <div className="headerclassofhome"><Link to="/topmovies"><h4 className='top_headlines'>Top Rated Movies</h4> </Link>
-                    <img style={{ width: '15px', height: '15px' }} src={next} alt="" />
+                    <img style={{ width: '15px', height: '15px', marginTop:'8px' }} src={next} alt="" />
                 </div>
                 <div className='container_custom spaceabove'>
                     <div className="grid_custom">
                         {
                             top.map((item) => {
                                 return (
-                                    <Cardc title={item.original_title} image={item.poster_path} desc={item.overview} date={item.release_date} ratings={item.vote_average} />
+                                    <Cardc id={item.id} cat="movie" title={item.original_title} image={item.poster_path} desc={item.overview} date={item.release_date} ratings={item.vote_average} />
                                 )
                             })
                         }
@@ -61,14 +61,14 @@ export const Home = (props) => {
 
 
                 <div className="headerclassofhome"><Link to="/nowmovies"><h4 className='top_headlines'>Now Playing Movies</h4> </Link>
-                    <img style={{ width: '15px', height: '15px' }} src={next} alt="" />
+                    <img style={{ width: '15px', height: '15px', marginTop:'8px' }} src={next} alt="" />
                 </div>
                 <div className='container_custom spaceabove'>
                     <div className="grid_custom">
                         {
                             nowplaying.map((item) => {
                                 return (
-                                    <Cardc title={item.original_title} image={item.poster_path} desc={item.overview} date={item.release_date} ratings={item.vote_average} />
+                                    <Cardc id={item.id} cat="movie" title={item.original_title} image={item.poster_path} desc={item.overview} date={item.release_date} ratings={item.vote_average} />
                                 )
                             })
                         }

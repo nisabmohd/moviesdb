@@ -18,7 +18,7 @@
 }
 .searchbar button{
     margin:0 0;
-    /* cursor: pointer; */
+    cursor: pointer;
     background-color: transparent;
     outline: none;
     border: none;

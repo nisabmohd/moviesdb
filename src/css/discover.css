@@ -4,9 +4,15 @@
     margin-top: 15px;
     text-align: left;
 }
-.discovercard img{
+.discovercard a img{
     width: 100%;
-    border-radius: 12px
+    border-radius: 15px
+}
+.discovercard a img:hover{
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 40px #cecece,
+             -20px -20px 40px #d3d3d3;
 }
 .griddisc{
     width: 75%;
@@ -14,6 +20,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     padding-top: 35px;
+    place-content: center;
 }
 .discovercard h5{
     margin-top: 9px;
