@@ -17,10 +17,7 @@ npm install
 npm start
 ```
 
-#### Screenshots
-
-<img src="./images/2.png">
-
+#### Preview
 <br/>
+<video src="./images/video.webm" width="100%" autoplay>
 
-<img src="./images/1.png">
