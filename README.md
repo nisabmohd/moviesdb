@@ -18,6 +18,6 @@ npm start
 ```
 
 #### Preview
-<br/>
-<video src="./images/video.webm" width="100%" autoplay controls>
+
+https://user-images.githubusercontent.com/76525761/151528897-2b9851d6-7edb-41a0-9618-c75be3f83a7d.mp4
 
