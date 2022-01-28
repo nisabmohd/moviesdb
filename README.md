@@ -19,5 +19,5 @@ npm start
 
 #### Preview
 <br/>
-<video src="./images/video.webm" width="100%" autoplay>
+<video src="./images/video.webm" width="100%" autoplay controls>
 
